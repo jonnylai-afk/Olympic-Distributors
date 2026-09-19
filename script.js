@@ -29,6 +29,10 @@
 
   // Language toggle
   const dict = window.I18N || {};
+  // Snapshot the page's original English so toggling back from French restores it
+  dict.en = dict.en || {};
+  document.querySelectorAll('[data-i18n]').forEach(el => { if (!(el.dataset.i18n in dict.en)) dict.en[el.dataset.i18n] = el.innerHTML; });
+  document.querySelectorAll('[data-i18n-ph]').forEach(el => { if (!(el.dataset.i18nPh in dict.en)) dict.en[el.dataset.i18nPh] = el.placeholder; });
   function setLang(lang) {
     document.documentElement.lang = lang;
     document.querySelectorAll('[data-i18n]').forEach(el => {
