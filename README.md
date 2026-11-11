@@ -12,6 +12,8 @@ Create a free form at formspree.io, then replace `YOUR_FORM_ID` in `index.html` 
 
 ## Files
 - `index.html` — page content (EN, with `data-i18n` keys)
-- `i18n.js` — French copy
+- `i18n.js` — French and Traditional Chinese copy
 - `styles.css`, `script.js` — styling, nav, reveals, language toggle, form handling
+- `globe.js` — animated sourcing globe in the hero (canvas, no dependencies)
+- `fx.js` — interaction layer: kinetic headings, parallax, cursor, tilt, optional sound, rolodex, live graphs
 - `assets/` — logos
